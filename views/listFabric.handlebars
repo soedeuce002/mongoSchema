@@ -1,0 +1,30 @@
+<h1>Fabric Inventory</h1>
+
+
+<table border="1">
+  <tr>
+    <th>
+      Type of Fabric
+    </th>
+    <th>
+      Number of Yards
+    </th>
+    <th>
+      Description
+    </th>
+    <th>
+      Purchased at
+    </th>
+    <th></th>
+  </tr>
+  {{#collections}}
+  <tr>
+    <td><a href="/fabricForm?id={{_id}}">{{type}}</a></td>
+    <td>{{yards}}</td>
+    <td>{{description.color}}</td>
+    <td>{{purchasedAt}}</td>
+    <td><a href="/deleteFabric/?id={{_id}}">Delete</a></td>
+  </tr>
+  {{/collections}}
+
+</table>

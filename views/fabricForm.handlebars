@@ -1,0 +1,31 @@
+<h1>Add New Fabric</h1>
+
+<form action="/addFabric" method="post">
+  <label for="type">Type of Fabric</label>
+  <input type="text" id="type" name="type" value="{{collections.type}}" />
+  <div class="fieldError">{{errors.type.message}}</div>
+  <br />
+
+  <label for="yards">Number of Yards</label>
+  <input type="text" id="yards" name="yards" value="{{collections.yards}}" />
+  <div class="fieldError">{{errors.yards.message}}</div>
+  <br />
+
+  <label for="description">Describe selected fabric</label>
+  <input type="text" id="describeColor" name="color" value="{{collections.description.color}}" />
+  <input type="text" id="isSparkly" name="sparkle" value="{{collections.description.sparkly}}"/>
+  <input type="text" id="patterned" name="pattern" value="{{collections.description.patterned}}"
+  <br />
+
+  <label for="purchasedAt">Store Where Purchased</label>
+  <input type="text" id="purchasedAt" name="purchasedAt" value="{{collections.purchasedAt}}" />
+  <br />
+
+
+
+  {{#if collections._id}}
+    <input type="hidden" name="id" value="{{collections._id}}" />
+  {{/if}}
+
+  <button class="button-primary">Save Fabric</button>
+</form>
